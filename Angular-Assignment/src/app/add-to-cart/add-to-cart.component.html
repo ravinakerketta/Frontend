@@ -1,0 +1,23 @@
+<div class="card shadow-lg " id="cartList">
+    <h5 class="card-title text-center text-uppercase fs-2 mt-2">Cart</h5>
+    <h6 class="card-subtitle mt-2 text-end text-muted fs-5">Total Price: <span id="total-price"> {{total_price}}</span> </h6>
+    
+
+    <div *ngFor  = "let products of cart_list">
+      <div class=" card shadow-lg mb-4 mt-4">
+          <div class="card-body">
+              <img src="{{products.product_imagepath}}" class="card-img-top" alt="..." height="180px">
+              <h1 class="card-title">{{products.product_name}}</h1>
+              <p class="card-text"><span >Description: </span>{{products.product_description}}</p>
+              <p><span >Quantity: </span>{{products.product_quantity}}</p>
+              
+              <p><span >Price: </span>{{products.product_price}}</p>
+              
+              <button class="btn btn-danger" (click)="removeproduct(products)">Remove</button>
+          </div>
+          
+      </div>
+  </div>
+  
+
+  </div>

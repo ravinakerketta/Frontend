@@ -1,0 +1,24 @@
+<form #product_form = "ngForm">
+    <div class="mb-3">
+      <label for="product" class="form-label">Product</label>
+      <input type="text" [(ngModel)]="form_product.product_name" name="product_name" #name="ngModel" class="form-control" id="product"  required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" [(ngModel)]="form_product.product_description" name="product_description" #name="ngModel" class="form-control" id="description" required>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" [(ngModel)]="form_product.product_imagepath" name="product_imagepath"  #name="ngModel"  class="form-control" id="image" required>
+    </div>
+    <div class="mb-3 ">
+       Quantity: <input type="text" [(ngModel)]="form_product.product_quantity" name="product_quantity" #name="ngModel" class="form-control " id="quantity" required>
+        Price:<input type="text" [(ngModel)]="form_product.product_price" name="product_price"   #name="ngModel" class="form-control" id="price" required>
+    </div>
+    
+    <button type="button" class="btn btn-primary" (click)="insert()">Add Product</button>
+  </form>
+  
+  <hr>
+  
+  <app-add-to-cart></app-add-to-cart>

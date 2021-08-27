@@ -1,0 +1,16 @@
+<div class="row  ">
+    <div class=" card shadow-lg  col-md-5 mx-4 mt-3 mb-3 " *ngFor  = "let products of _product_list" style="margin-right: 0px  !important;">
+        
+        <div class="card-body  ">
+            <img src="{{products.product_imagepath}}" class="card-img-top" alt="Image Not found." height="180px">
+            <h1 class="card-title">{{products.product_name}}</h1>
+            <p class="card-text"><span >Description: </span>{{products.product_description}}</p>
+            <p><span >Quantity: </span>{{products.product_quantity}}</p>
+            
+            <p><span >Price: </span>{{products.product_price}}</p>
+            
+            <button class="btn btn-primary" (click)=addtocart(products)>Add to Cart</button>
+        </div>
+        
+    </div>
+</div>
